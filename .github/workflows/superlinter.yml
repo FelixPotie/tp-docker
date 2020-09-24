@@ -1,0 +1,11 @@
+name: tp_devops
+
+on: push
+
+jobs:
+  ci:
+    steps:
+      -run : ./gradlew assemble
+      -run : ./gradlew check
+      -run : ./gradlew dockerBuildImage
+      -run : docker push felixpotie/tp_devops
