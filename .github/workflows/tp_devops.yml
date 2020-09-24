@@ -8,4 +8,5 @@ jobs:
       -run : ./gradlew assemble
       -run : ./gradlew check
       -run : ./gradlew dockerBuildImage
+      -run : docker-compose up
       -run : docker push felixpotie/tp_devops
