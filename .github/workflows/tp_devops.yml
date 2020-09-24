@@ -18,6 +18,6 @@ jobs:
         with:
           java-version: 1.8.0
       - run : ./gradlew assemble
-      - run : ./gradlew check -P dababase.url=postgres/tp_devops
+      - run : ./gradlew check -i -P dababase.url=postgres/tp_devops
      
 
