@@ -18,5 +18,6 @@ jobs:
       - run : ./gradlew assemble
       - run : ./gradlew check -i -P database.url=postgres/tp_devops
       - run : ./gradlew dockerBuildImage
+      - run : docker push felixpotie/tp_devops
 
 
