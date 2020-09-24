@@ -3,6 +3,15 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     application
     kotlin("jvm") version "1.3.50"
+    id("com.bmuschko.docker-java-application") version "5.3.0"
+}
+
+docker {
+    javaApplication {
+        baseImage.set("openjdk")
+        ports.set(listOf(8080, 5432))
+        tag.set("tpdocker")
+    }
 }
 
 group = "dev.gleroy.devops.tp-docker"

@@ -1,0 +1,17 @@
+version: '3'
+services:
+  postgres: 
+    image: postgres:latest
+    container_name: tp_devops
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: tp_devops
+      POSTGRES_USER: tp_devops
+      POSTGRES_PASSWORD: tp_devops
+  gradle:
+    image: jar_app
+    ports:
+      - "8080:8080"
+    environment:
+      dburl: postgres:5432/tp_devops
