@@ -81,13 +81,6 @@ tasks.withType<Test> {
     systemProperty("database.password", project.property("database.password"))
 }
 
-task<Exec>("docker") {
-    workingDir("./")
-    dependsOn("assemble")
-    commandLine("docker", "build", "-t", "felixpotie/tp-devops:${project.version}", ".")
-}
-
-
 tasks.withType<Wrapper> {
     gradleVersion = "5.6"
 }
