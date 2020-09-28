@@ -26,5 +26,5 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-      - run : ./gradlew dockerBuildImage -i
+      - run : ./gradlew dockerBuildImage
       - run : docker push felixpotie/tp_devops:1.0.0
