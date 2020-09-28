@@ -6,6 +6,9 @@ plugins {
     id("com.bmuschko.docker-java-application") version "5.3.0"
 }
 
+group = "dev.gleroy.devops.tp-docker"
+version = "1.0.0"
+
 docker {
     javaApplication {
         baseImage.set("openjdk")
@@ -14,8 +17,6 @@ docker {
     }
 }
 
-group = "dev.gleroy.devops.tp-docker"
-version = "1.0.0"
 
 application {
     mainClassName = "dev.gleroy.devops.tp.docker.AppKt"
