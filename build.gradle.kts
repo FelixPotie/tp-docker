@@ -10,7 +10,7 @@ docker {
     javaApplication {
         baseImage.set("openjdk")
         ports.set(listOf(8080, 5432))
-        tag.set("felixpotie/tp_devops")
+        tag.set("felixpotie/tp_devops:${project.version}")
     }
 }
 
